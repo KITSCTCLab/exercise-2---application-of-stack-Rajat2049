@@ -1,4 +1,5 @@
 class Evaluate:
+  
   """This class validates and evaluate postfix expression.
   Attributes:
       top: An integer which denotes the index of the element at the top of the stack currently.
@@ -6,9 +7,10 @@ class Evaluate:
       stack: A List which acts as a Stack.
   """
     # Write your code here
+    
 
+  def _init_(self, size):
 
-  def __init__(self, size):
     """Inits Evaluate with top, size_of_stack and stack.
     Arguments:
       size_of_stack: An integer to set the size of stack.
@@ -24,18 +26,17 @@ class Evaluate:
     Returns:
       True if it is empty, else returns False.
     """
-      # Write your code here
-     return (self.top==-1)
+    return (self.top==-1)
 
 
   def pop(self):
+
     """
     Do pop operation if the stack is not empty.
     Returns:
       The data which is popped out if the stack is not empty.
     """
-    # Write your code here
-     if not self.isEmpty():
+    if not self.isEmpty():
 
       k=self.stack[self.top]
       self.top-=1
@@ -48,7 +49,6 @@ class Evaluate:
     Arguments:
       operand: The operand to be pushed.
     """
-    # Write your code here
     self.top+=1
     self.stack[self.top]=operand
 
@@ -56,13 +56,6 @@ class Evaluate:
   def validate_postfix_expression(self, expression):
     """
     Check whether the expression is a valid postfix expression.
-    Arguments:
-      expression: A String which represents the expression to be validated.
-    Returns:
-      True if the expression is valid, else returns False.
-    """
-    # Write your code here
-        Check whether the expression is a valid postfix expression.
     Arguments:
       expression: A String which represents the expression to be validated.
     Returns:
@@ -100,8 +93,7 @@ class Evaluate:
     Returns:
       The result of evaluated postfix expression.
     """
-    # Write your code here
-        flag=0
+    flag=0
     for i in expression:
 
       if(not(i=="-" or i=="+" or i=="*" or i=="/" or i=="^")):
@@ -125,6 +117,7 @@ class Evaluate:
           self.stack[self.top]=int(self.stack[self.top])^int(secoperator)
     
     return int(self.stack[self.top])
+
 
 
 # Do not change the following code
