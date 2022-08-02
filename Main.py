@@ -117,6 +117,8 @@ class Evaluate:
           self.stack[self.top]=int(self.stack[self.top])^int(secoperator)
     
     return int(self.stack[self.top])
+  
+  
 
 # Do not change the following code
 postfix_expression = input()  # Read postfix expression
