@@ -118,8 +118,6 @@ class Evaluate:
     
     return int(self.stack[self.top])
 
-
-
 # Do not change the following code
 postfix_expression = input()  # Read postfix expression
 tokens = postfix_expression.split()
